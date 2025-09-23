@@ -1,0 +1,22 @@
+;file.as
+
+NAME:.extern H
+
+.define size = -5
+
+mcr m_mcr1
+	prn #size
+	END: hlt
+endmcr
+L1data: .data +3,-4,6,9,100
+cmp L1data[2],#-9
+MOVE: add #-6,H
+F5: bne r4
+m_mcr1
+bne END
+
+mov L1data[2],L1data[0]
+NEG: not H
+T0:jmp WASD
+WASD: .string "def123"
+

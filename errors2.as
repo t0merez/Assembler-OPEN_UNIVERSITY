@@ -1,0 +1,11 @@
+.entry W1
+.extern W1
+
+inc R2
+
+mov r9,r2
+
+STR:.data 1,2,3,-4,+5
+mov STR[1],STR[0]
+
+
